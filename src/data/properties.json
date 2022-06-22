@@ -1,0 +1,20 @@
+[
+    {
+      "Id":1,
+      "Name":"OP-SIEGE",
+      "Type":"Villa",
+      "Price":1000000
+    },
+    {
+      "Id":2,
+      "Name":"OP-DIGITAL",
+      "Type":"Villa",
+      "Price":1000000
+    },
+    {
+      "Id":3,
+      "Name":"OP-CONSULTING",
+      "Type":"Villa",
+      "Price":1000000
+    }
+]
