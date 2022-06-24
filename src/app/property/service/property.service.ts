@@ -9,14 +9,14 @@ import { IProperty } from '../IProperty.interface';
 export class PropertyService {
 
   constructor(private http: HttpClient) { }
-  getAllProperties() {
+  getAllProperties(sellRent:number) {
     return this.http.get('data/properties.json').pipe(
       map((data:any) => {
         
         const propertiesArray: Array<IProperty> = [];
         for (const Id in data) {
          console.log(data[Id]);
-          if (data.hasOwnProperty(Id))
+          if (data.hasOwnProperty(Id) && data[Id].SellRent===sellRent)
           {
             propertiesArray.push(data[Id]);
             //console.log(propertiesArray);

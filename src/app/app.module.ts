@@ -8,18 +8,36 @@ import { PropertyCardComponent } from './property/property-card/property-card.co
 import { PropertyListComponent } from './property/property-list/property-list.component';
 import{HttpClientModule} from '@angular/common/http'
 import { PropertyService } from './property/service/property.service';
+import { Routes, RouterModule } from '@angular/router';
+import { AddPropertyComponent } from './property/add-property/add-property.component';
+import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const appRoutes:Routes=[
+  { path: '', component:PropertyListComponent },
+  { path: '**', component:PropertyListComponent },
+  { path: 'add-property', component:AddPropertyComponent },
+  { path: 'rent-property', component:PropertyListComponent },
+  { path: 'property-detail/:id', component:PropertyDetailComponent }
+
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     PropertyCardComponent,
-    PropertyListComponent
+    PropertyListComponent,
+    AddPropertyComponent,
+    AddPropertyComponent,
+    PropertyDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     PropertyService
