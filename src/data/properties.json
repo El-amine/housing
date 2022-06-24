@@ -2,7 +2,7 @@
     {
       "Id":1,
       "SellRent":1,
-      "Name":"OP-SIEGE",
+      "Name":"OP-SIEGE [OP-S]",
       "Type":"Villa",
       "Price":1000000,
       "Image":"default_home",
@@ -11,7 +11,7 @@
     {
       "Id":2,
       "SellRent":2,
-      "Name":"OP-DIGITAL",
+      "Name":"OP-DIGITAL [OD]",
       "Type":"Villa",
       "Price":1000000,
       "Image":"niceWhiteHouse",
@@ -20,7 +20,7 @@
     {
       "Id":3,
       "SellRent":1,
-      "Name":"OP-CONSULTING",
+      "Name":"OP-CONSULTING [OCG]",
       "Type":"Villa",
       "Price":1000000,
       "Image":"dream",
