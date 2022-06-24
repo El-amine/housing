@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import  {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,11 +15,11 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes:Routes=[
-  { path: '', component:PropertyListComponent },
-  { path: '**', component:PropertyListComponent },
+  { path: '', component:PropertyListComponent },  
   { path: 'add-property', component:AddPropertyComponent },
   { path: 'rent-property', component:PropertyListComponent },
-  { path: 'property-detail/:id', component:PropertyDetailComponent }
+  { path: 'property-detail/:id', component:PropertyDetailComponent },
+  { path: '**', component:PageNotFoundComponent }
 
 ]
 
@@ -37,7 +38,8 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [
     PropertyService
